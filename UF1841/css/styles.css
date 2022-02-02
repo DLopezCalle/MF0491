@@ -23,8 +23,9 @@ main
 article
 {
     background-color: yellow;
-    width: 25rem;
+    width: 55rem;
     font-size: 1.5rem;
     line-height: 2rem;
     padding: 1rem;
+    border-radius: 10px;
 }
