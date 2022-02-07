@@ -1,0 +1,120 @@
+:root 
+{
+    --fondoOscuro: #9EA123;
+    --fondoClaro: #9EA123;
+    --textoBlanco: white;
+
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    background-image: url("../images/fondo_encabezado.png");
+    background-repeat: repeat-x;
+    background-position-x: center;
+
+    padding-left: 30vw;
+}
+
+#contenidoCabeza
+{
+    width: 60vw;
+    border-left: solid 1px;
+    border-right: solid 1px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+header ul
+{
+    display: flex;
+    justify-content: flex-end;
+
+    width: 90vw;
+    padding-right: 1rem;
+}
+
+header li 
+{
+    list-style: none;
+    
+    padding: 1vw;
+    margin-left: 0.4rem;
+    background-color: var(--fondoClaro);
+}
+
+/* ------------------------------------------------ */
+
+nav
+{
+    background-color: var(--fondoOscuro);
+}
+
+nav li 
+{
+    display: inline-block;
+    color: var(--textoBlanco);
+
+    padding: 1vw;
+}
+
+nav ul
+{
+    padding-left: 30vw;
+}
+
+#navIzquierda
+{
+    display: inline-block;
+    margin-right: 14rem;
+}
+
+nav li:hover
+{
+    background-color: black;
+}
+
+/* ----------------------------------------------- */
+
+main
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside
+{
+    width: 22vw;
+    padding: 4vw;
+}
+
+#principal
+{
+    width: 60vw;
+    background-image: url("../images/hojarasca.jpg");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    height: 440px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;    
+}
+
+blockquote
+{
+    background-color: rgba(255, 255, 255, 0.5);
+    
+    position: absolute;
+    top: 23vw;
+    left: 58vw;
+
+    width: 30vw;
+}
