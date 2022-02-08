@@ -149,10 +149,10 @@ footer
     background-color: var(--fondoClaro);
     border-top: solid 40px var(--fondoOscuro);
 
-    margin-top: 3%;
+    margin-top: 30px;
     padding: 2%;
     text-align: center;
-    line-height: 1.5rem;
+    line-height: 24px;
 }
 
 footer a
@@ -173,6 +173,7 @@ footer a:hover
 
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 
     justify-content: space-evenly;
 }
@@ -318,4 +319,102 @@ footer {
 
     grid-template-areas:
         "izquierdaPie imagenPie derechaPie";
+}
+
+@media (max-width: 830px)
+{
+
+    body > nav ul
+    {
+        display: inline-block;
+    }
+
+    #navIzquierda
+    {
+        width: 80%;
+    }
+
+    body #navIzquierda > a 
+    {
+        margin-left: 5%;
+        
+    }
+    
+    nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    
+        /*column-gap: var(--margen);
+        row-gap: var(--margen);*/
+    
+        grid-template-areas:
+            "contenidoNav";
+    }
+}
+
+@media (max-width: 690px)
+{
+    header {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    
+        /*column-gap: var(--margen);
+        row-gap: var(--margen);*/
+    
+        grid-template-areas:
+            "contenidoCabecera";
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: auto;
+    
+        /*column-gap: var(--margen);
+        row-gap: var(--margen);*/
+    
+        grid-template-areas:
+            "principal principal"
+            "descripcion bienvenida";
+    }
+
+    body > nav ul > a li
+    {
+        float: none;
+        margin-left: 4%;
+    }
+
+    body > nav ul
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navIzquierda
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    body > nav li
+    {
+        width: 70vw;
+        text-align: center;
+        background-color: var(--fondoClaro);
+        margin: 0.5%;
+    }
+
+    #bienvenida
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
