@@ -144,6 +144,56 @@ main li:hover
 
 /* ------------------------------------------------------- */
 
+footer
+{
+    background-color: var(--fondoClaro);
+    border-top: solid 40px var(--fondoOscuro);
+
+    margin-top: 3%;
+    padding: 2%;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover
+{
+    color: var(--numeroSeleccionado);
+}
+
+#izquierdaPie ul
+{
+    list-style: none;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+}
+
+#imagenPie
+{
+    height: 70px;
+    position: relative;
+    top: -67px;
+}
+
+#derechaPie
+{
+    text-align: start;
+    padding-left: 4%;
+}
+
+
+
+/* ------------------------------------------------------- */
+
 body > header 
 {
     grid-area: cabecera;
@@ -188,6 +238,23 @@ main > #bienvenida
 {
     grid-area: bienvenida;
 }
+
+footer > #izquierdaPie
+{
+    grid-area: izquierdaPie;
+}
+
+footer > #imagenPie
+{
+    grid-area: imagenPie;
+}
+
+footer > #derechaPie
+{
+    grid-area: derechaPie;
+}
+
+
 
 body {
     display: grid;
@@ -239,4 +306,16 @@ main {
     grid-template-areas:
         "descripcion principal ."
         ". bienvenida .";
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-rows: auto;
+
+    /*column-gap: var(--margen);
+    row-gap: var(--margen);*/
+
+    grid-template-areas:
+        "izquierdaPie imagenPie derechaPie";
 }
