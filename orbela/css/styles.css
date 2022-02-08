@@ -1,7 +1,7 @@
 :root 
 {
     --fondoOscuro: #9EA123;
-    --fondoClaro: #9EA123;
+    --fondoClaro: #aeae2d;
     --textoBlanco: white;
 
 }
@@ -17,13 +17,10 @@ header
     background-image: url("../images/fondo_encabezado.png");
     background-repeat: repeat-x;
     background-position-x: center;
-
-    padding-left: 30vw;
 }
 
 #contenidoCabeza
 {
-    width: 60vw;
     border-left: solid 1px;
     border-right: solid 1px;
 
@@ -37,7 +34,7 @@ header ul
     display: flex;
     justify-content: flex-end;
 
-    width: 90vw;
+    width: 100%;
     padding-right: 1rem;
 }
 
@@ -65,39 +62,30 @@ nav li
     padding: 1vw;
 }
 
-nav ul
-{
-    padding-left: 30vw;
-}
-
 #navIzquierda
 {
     display: inline-block;
-    margin-right: 14rem;
 }
 
-nav li:hover
+body > nav ul > a li
 {
-    background-color: black;
+    float: right;
+}
+
+body > nav li:hover
+{
+    background-color: var(--fondoClaro);
 }
 
 /* ----------------------------------------------- */
 
-main
-{
-    display: flex;
-    flex-wrap: wrap;
-}
-
 aside
 {
-    width: 22vw;
     padding: 4vw;
 }
 
 #principal
 {
-    width: 60vw;
     background-image: url("../images/hojarasca.jpg");
     background-position-x: center;
     background-repeat: no-repeat;
@@ -118,4 +106,103 @@ blockquote
 
     padding: 1vw;
     width: 30vw;
+}*/
+
+/* ------------------------------------------------------- */
+
+body > header 
+{
+    grid-area: cabecera;
+}
+
+body > nav
+{
+    grid-area: navCabecera
+}
+
+body > main 
+{
+    grid-area: contenido;
+}
+
+body > footer 
+{
+    grid-area: pie;
+}
+
+header > #orbela
+{
+    grid-area: contenidoCabecera
+}
+
+body > nav > ul
+{
+    grid-area: contenidoNav;
+}
+
+main > aside
+{
+    grid-area: descripcion;
+}
+
+main > #principal
+{
+    grid-area: principal;
+}
+
+main > #bienvenida
+{
+    grid-area: bienvenida;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    /*column-gap: var(--margen);
+    row-gap: var(--margen);*/
+
+    grid-template-areas:
+        "cabecera"
+        "navCabecera"
+        "contenido"
+        "pie";
+}
+
+header {
+    display: grid;
+    grid-template-columns: 25vw 65vw 1fr;
+    grid-template-rows: auto;
+
+    /*column-gap: var(--margen);
+    row-gap: var(--margen);*/
+
+    grid-template-areas:
+        ". contenidoCabecera .";
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 25vw 65vw 1fr;
+    grid-template-rows: auto;
+
+    /*column-gap: var(--margen);
+    row-gap: var(--margen);*/
+
+    grid-template-areas:
+        ". contenidoNav .";
+}
+
+main {
+    display: grid;
+    grid-template-columns: 25vw 65vw 1fr;
+    grid-template-rows: auto;
+
+    /*column-gap: var(--margen);
+    row-gap: var(--margen);*/
+
+    grid-template-areas:
+        "descripcion principal ."
+        "bienvenida bienvenida bienvenida";
 }
