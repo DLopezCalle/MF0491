@@ -140,6 +140,7 @@ main li:hover
 {
     margin-left: 5vw;
     margin-right: 5vw;
+    margin-top: 2vw;
 }
 
 /* ------------------------------------------------------- */
@@ -306,7 +307,7 @@ main {
 
     grid-template-areas:
         "descripcion principal ."
-        ". bienvenida .";
+        "descripcion bienvenida .";
 }
 
 footer {
@@ -474,8 +475,14 @@ footer {
         display: none;
     }
 
+    /*footer
+    {
+        line-height: 25px;
+    }*/
+
     footer > ul li
     {
         background-color: white;
+        line-height: 25px;
     }
 }
