@@ -95,6 +95,7 @@ aside
     display: flex;
     flex-direction: column;
     justify-content: flex-end;    
+    color: rgb(0, 255, 0)
 }
 
 blockquote
@@ -475,6 +476,10 @@ footer {
         display: none;
     }
 
+    span {
+        
+    }
+
     /*footer
     {
         line-height: 25px;
@@ -482,7 +487,7 @@ footer {
 
     footer > ul li
     {
-        background-color: white;
+        background-color: white; 
         line-height: 25px;
     }
 }
