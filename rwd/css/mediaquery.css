@@ -1,4 +1,4 @@
-/* Ajustes preferenciales */
+* Ajustes preferenciales *
 body 
 {
     background-position-x: center;
@@ -69,7 +69,7 @@ body
     {
         width: 40%;
         border-top: none;
-        /* background-color: yellow; */
+        * background-color: yellow; *
     }
         header img
         {

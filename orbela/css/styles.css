@@ -15,7 +15,7 @@
 
 header
 {
-    background-image: url("../images/fondo_encabezado.png");
+    background-image: url('..imagesfondo_encabezado.png');
     background-repeat: repeat-x;
     background-position-x: center;
 }
@@ -48,7 +48,7 @@ header li
     background-color: var(--fondoClaro);
 }
 
-/* ------------------------------------------------ */
+* ------------------------------------------------ *
 
 nav
 {
@@ -78,7 +78,7 @@ body > nav li:hover
     background-color: var(--fondoClaro);
 }
 
-/* ----------------------------------------------- */
+* ----------------------------------------------- *
 
 aside
 {
@@ -87,7 +87,7 @@ aside
 
 #principal
 {
-    background-image: url("../images/hojarasca.jpg");
+    background-image: url('..imageshojarasca.jpg');
     background-position-x: center;
     background-repeat: no-repeat;
     height: 440px;
@@ -144,7 +144,7 @@ main li:hover
     margin-top: 2vw;
 }
 
-/* ------------------------------------------------------- */
+* ------------------------------------------------------- *
 
 footer
 {
@@ -195,7 +195,7 @@ footer a:hover
 
 
 
-/* ------------------------------------------------------- */
+* ------------------------------------------------------- *
 
 body > header 
 {
@@ -264,14 +264,14 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 
-    /*column-gap: var(--margen);
-    row-gap: var(--margen);*/
+    *column-gap: var(--margen);
+    row-gap: var(--margen);*
 
     grid-template-areas:
-        "cabecera"
-        "navCabecera"
-        "contenido"
-        "pie";
+        'cabecera'
+        'navCabecera'
+        'contenido'
+        'pie';
 }
 
 header {
@@ -279,11 +279,11 @@ header {
     grid-template-columns: 25vw 65vw 1fr;
     grid-template-rows: auto;
 
-    /*column-gap: var(--margen);
-    row-gap: var(--margen);*/
+    *column-gap: var(--margen);
+    row-gap: var(--margen);*
 
     grid-template-areas:
-        ". contenidoCabecera .";
+        '. contenidoCabecera .';
 }
 
 nav {
@@ -291,11 +291,11 @@ nav {
     grid-template-columns: 25vw 65vw 1fr;
     grid-template-rows: auto;
 
-    /*column-gap: var(--margen);
-    row-gap: var(--margen);*/
+    *column-gap: var(--margen);
+    row-gap: var(--margen);*
 
     grid-template-areas:
-        ". contenidoNav .";
+        '. contenidoNav .';
 }
 
 main {
@@ -303,12 +303,12 @@ main {
     grid-template-columns: 25vw 65vw 1fr;
     grid-template-rows: auto;
 
-    /*column-gap: var(--margen);
-    row-gap: var(--margen);*/
+    *column-gap: var(--margen);
+    row-gap: var(--margen);*
 
     grid-template-areas:
-        "descripcion principal ."
-        "descripcion bienvenida .";
+        'descripcion principal .'
+        'descripcion bienvenida .';
 }
 
 footer {
@@ -316,11 +316,11 @@ footer {
     grid-template-columns: 3fr 1fr 3fr;
     grid-template-rows: auto;
 
-    /*column-gap: var(--margen);
-    row-gap: var(--margen);*/
+    *column-gap: var(--margen);
+    row-gap: var(--margen);*
 
     grid-template-areas:
-        "izquierdaPie imagenPie derechaPie";
+        'izquierdaPie imagenPie derechaPie';
 }
 
 @media (max-width: 830px)
@@ -330,11 +330,11 @@ footer {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     
-        /*column-gap: var(--margen);
-        row-gap: var(--margen);*/
+        *column-gap: var(--margen);
+        row-gap: var(--margen);*
     
         grid-template-areas:
-            "contenidoNav";
+            'contenidoNav';
     }
 
     body > nav ul
@@ -354,7 +354,7 @@ footer {
     }
 }
 
-/* -------------------------------------------------------- */
+* -------------------------------------------------------- *
 
 @media (max-width: 690px)
 {
@@ -363,11 +363,11 @@ footer {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     
-        /*column-gap: var(--margen);
-        row-gap: var(--margen);*/
+        *column-gap: var(--margen);
+        row-gap: var(--margen);*
     
         grid-template-areas:
-            "contenidoCabecera";
+            'contenidoCabecera';
     }
 
     main {
@@ -375,15 +375,15 @@ footer {
         grid-template-columns: 2fr 2fr;
         grid-template-rows: auto;
     
-        /*column-gap: var(--margen);
-        row-gap: var(--margen);*/
+        *column-gap: var(--margen);
+        row-gap: var(--margen);*
     
         grid-template-areas:
-            "principal principal"
-            "descripcion bienvenida";
+            'principal principal'
+            'descripcion bienvenida';
     }
 
-    /* -------------------------------------------- */
+    * -------------------------------------------- *
 
     body > nav ul > a li
     {
@@ -424,7 +424,7 @@ footer {
     }
 }
 
-/* ------------------------------------------------------- */
+* ------------------------------------------------------- *
 
 @media (max-width: 425px)
 {
@@ -433,13 +433,13 @@ footer {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     
-        /*column-gap: var(--margen);
-        row-gap: var(--margen);*/
+        *column-gap: var(--margen);
+        row-gap: var(--margen);*
     
         grid-template-areas:
-            "principal"
-            "bienvenida"
-            "descripcion";
+            'principal'
+            'bienvenida'
+            'descripcion';
     }
 
     footer {
@@ -447,14 +447,14 @@ footer {
         grid-template-columns: 6fr 1fr 5fr;
         grid-template-rows: auto;
     
-        /*column-gap: var(--margen);
-        row-gap: var(--margen);*/
+        *column-gap: var(--margen);
+        row-gap: var(--margen);*
     
         grid-template-areas:
-            "izquierdaPie . derechaPie";
+            'izquierdaPie . derechaPie';
     }
 
-    /* ---------------------------------------------- */
+    * ---------------------------------------------- *
 
     aside 
     {
@@ -480,10 +480,10 @@ footer {
         
     }
 
-    /*footer
+    *footer
     {
         line-height: 25px;
-    }*/
+    }*
 
     footer > ul li
     {

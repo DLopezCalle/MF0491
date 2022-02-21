@@ -1,10 +1,10 @@
-/* 
+* 
 	#1 grid
 	#2 MEDIA QUERIES
 
-*/
+*
 
-/* #1 presentation */
+* #1 presentation *
 
 	header {
 		border-top:4px solid #315968;
@@ -18,7 +18,7 @@
 		width:40%;
 		height:96px;
 		margin:0 auto;
-		background:url(../img/ribbon-fnd.png) repeat-x 0 0;
+		background:url(..imgribbon-fnd.png) repeat-x 0 0;
 		text-align:center;
 	}
 	
@@ -27,7 +27,7 @@
 			width:29.9%;
 			margin:4px 10px 0 0;
 			background:#4a7e08;
-			font:20px/59px Times, serif;
+			font:20px59px Times, serif;
 			text-transform:uppercase;
 			color:#000;
 			text-decoration:none;
@@ -45,10 +45,10 @@
 		left:-125px;
 		top:0;
 		display:block;
-		content:" ";
+		content:' ';
 		width:125px;
 		height:96px;
-		background:url(../img/ribbon-left.png) no-repeat 0 0;
+		background:url(..imgribbon-left.png) no-repeat 0 0;
 	}
 	
 	.navBar:after {
@@ -56,10 +56,10 @@
 		right:-125px;
 		top:0;
 		display:block;
-		content:" ";
+		content:' ';
 		width:125px;
 		height:96px;
-		background:url(../img/ribbon-right.png) no-repeat 0 0;
+		background:url(..imgribbon-right.png) no-repeat 0 0;
 	}
 	
 	section[data-type=slider] {
@@ -77,8 +77,8 @@
 		padding:0 0 20px 0;
 		border-bottom:1px solid #8ec1cb;
 		
-		/*-moz-column-count:3;
-		-moz-column-gap:60px;*/
+		*-moz-column-count:3;
+		-moz-column-gap:60px;*
 		font-size:14px;
 		line-height:1.1em;
 	}
@@ -136,7 +136,7 @@
 			padding:.5em 1em;
 		}
 		
-		footer article[data-type="cols"] {
+		footer article[data-type='cols'] {
 			width:90%;
 			margin:0 auto;
 			border-bottom:0;
