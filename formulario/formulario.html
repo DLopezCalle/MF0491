@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='bootstrap.min.css' />
+    <script src='formulario.js'></script>
+    <title>BootStrap y JavaScript</title>
+</head>
+
+<h1>Buenas</h1>
+
+<body>
+    <form class='container-fluid' id='form'>
+        <div class='mb-3'>
+            <label for='dni' class='form-label'>DNI</label>
+            <input type='text' class='form-control' id='dni' name="dni" pattern="[0-9]{8}" />
+            <div id='dniHelp' class='form-text'>
+                Introduzca su DNI en formato 12345678A
+            </div>
+        </div>
+        <div class='mb-3'>
+            <label for='password' class='form-label'>Contraseña</label>
+            <input type='password' class='form-control' id='password' />
+        </div>
+        <div class='mb-3'>
+            <label for='confirm' class='form-label'>Confirma tu contraseña</label>
+            <input type='password' class='form-control' id='confirm' />
+        </div>
+        <button type='submit' class='btn btn-primary'>Submit</button>
+    </form>
+</body>
+
+</html>
