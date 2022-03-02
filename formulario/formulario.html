@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='es'>
 
 <head>
     <meta charset='UTF-8' />
@@ -9,27 +9,53 @@
     <title>BootStrap y JavaScript</title>
 </head>
 
-<h1>Buenas</h1>
-
 <body>
-    <form class='container-fluid' id='form'>
+    <form class='container mt-4 needs-validation' id='form' novalidate>
         <div class='mb-3'>
             <label for='dni' class='form-label'>DNI</label>
-            <input type='text' class='form-control' id='dni' name="dni" pattern="[0-9]{8}" />
+            <input type='text' class='form-control' id='dni' name='dni' pattern='[0-9]{8}[A-Za-z]{1}' required />
             <div id='dniHelp' class='form-text'>
-                Introduzca su DNI en formato 12345678A
+                Sólo en necesario que ingrese su número (Sin letra).
             </div>
         </div>
         <div class='mb-3'>
             <label for='password' class='form-label'>Contraseña</label>
-            <input type='password' class='form-control' id='password' />
+            <input type='password' class='form-control' id='password' pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$" required />
+            <div id='passwordHelp' class='form-text'>
+                La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, 
+                al menos una minúscula y al menos una mayúscula.
+            </div>
         </div>
         <div class='mb-3'>
             <label for='confirm' class='form-label'>Confirma tu contraseña</label>
-            <input type='password' class='form-control' id='confirm' />
+            <input type='password' class='form-control' id='confirm' required />
+            <div id='confirmHelp' class='form-text'>
+                Las contraseñas deben coincidir
+            </div>
         </div>
-        <button type='submit' class='btn btn-primary'>Submit</button>
+        <button id="enviar" type='submit' class='btn btn-secondary'>Submit</button>
     </form>
 </body>
+
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
 
 </html>
