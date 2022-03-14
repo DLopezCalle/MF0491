@@ -6,6 +6,7 @@
 	--main-bg-section: #171717;
 	--main-text-1: #E7E7E7;
 	--main-text-2: #B2B2B2;
+	--main-text-3: #FFFFFF;
 }
 
 @font-face{
@@ -18,7 +19,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: spotify, "Times New Roman", Times, serif;;
-	color: var(--main-text-1);
+	/* color: var(--main-text-1); */
 }
 
 #logotype
@@ -38,13 +39,92 @@
 	font-size: 1.5rem;
 }
 
+aside article ul
+{
+	
+
+	list-style: none;
+
+	display: flex;
+	flex-direction: column;
+}
+
+aside article ul a
+{
+	color: var(--main-text-2);
+
+	text-decoration: none;
+	margin: 0.6rem 1.6rem;
+
+	transition: 0.5s;
+}
+
+#select-focus /* aside article ul a | cuando está seleccionada la opción */
+
+{
+	color: var(--main-text-1);
+
+	transition: 0.5s;
+}
+
+aside article ul a:hover
+{
+	color: var(--main-text-3);
+	
+	transition: 0.5s;
+}
+
+aside article ul a li
+{
+	display: flex;
+	align-items: center;
+}
+
+aside article ul a li i
+{
+	width: 18%;
+}
+
+aside article ul a li h3
+{
+	font-size: 0.8rem;
+}
 
 
+#aside-medium
+{
+	margin-top: 1.8rem;
+}
 
+#aside-down
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
 
+	height: 56vh;
+}
 
+#aside-down ul
+{
+	margin-bottom: 5rem;
+}
 
+aside #aside-down ul a
+{
+	color: var(--main-text-2);
+	margin: 0.2rem 1.6rem;
+}
 
+aside #aside-down ul a:hover
+{
+	text-decoration: underline;
+}
+
+#aside-down h4
+{
+	font-size: 0.6rem;
+}
 
 
 header
