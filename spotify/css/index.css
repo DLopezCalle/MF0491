@@ -22,6 +22,8 @@
 	/* color: var(--main-text-1); */
 }
 
+/* ================ ASIDE ================ */
+
 #logotype
 {
 	color: var(--main-text-1);
@@ -41,8 +43,6 @@
 
 aside article ul
 {
-	
-
 	list-style: none;
 
 	display: flex;
@@ -59,7 +59,7 @@ aside article ul a
 	transition: 0.5s;
 }
 
-#select-focus /* aside article ul a | cuando está seleccionada la opción */
+#select-focus /* aside article ul a | when option is selected */
 
 {
 	color: var(--main-text-1);
@@ -126,6 +126,73 @@ aside #aside-down ul a:hover
 	font-size: 0.6rem;
 }
 
+/* ================ NAV ================ */
+
+nav
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding-left: 1rem;
+}
+
+nav .button-row
+{
+	text-decoration: none;
+	color: var(--main-text-2);
+	background-color: var(--main-bg-1);
+
+	font-size: 1.7rem;
+	padding: 0.2rem 0.7rem;
+	margin-left: 0.8rem;
+	border-radius: 50px;	
+}
+
+nav .button-row:hover
+{
+	cursor: not-allowed;
+}
+
+
+/* Buttons in the right */
+
+nav .button-sesion
+{
+	display: inline-block;
+	text-decoration: none;
+	font-size: 0.75rem;
+
+
+	border-radius: 3rem;
+	padding: 0.7rem 2.2rem;
+	margin-right: 1.3rem;
+
+	transition: 0.1s;
+}
+
+nav .button-sesion:hover
+{
+	transform: scale(1.05);
+	transition: 0.1s;
+}
+
+.register
+{
+	color: var(--main-text-2);
+}
+
+.login
+{
+	color: var(--main-bg-2);
+	background-color: var(--main-text-3);
+}
+
+
+
+
+
+
 
 header
 {
@@ -136,14 +203,12 @@ aside
 {
 	grid-area: aside;
 	background-color: var(--main-bg-1);
-	width: 100%;
 }
 
 nav
 {
 	grid-area: nav;
 	background-color: var(--main-bg-2);
-	width: 100%;
 }
 
 main
@@ -156,8 +221,8 @@ main
 body
 {
 	display: grid;
-	grid-template-columns: 16rem 1fr;
-	grid-template-rows: 3rem auto;
+	grid-template-columns: 15rem 1fr;
+	grid-template-rows: 3.8rem auto;
 	grid-template-areas:
 	"aside nav"
 	"aside main"
