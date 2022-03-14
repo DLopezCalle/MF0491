@@ -1,0 +1,84 @@
+:root
+{
+	--main-bg-1: #000000;
+	--main-bg-2: #101010;
+	--main-bg-3: #1E1E1E;
+	--main-bg-section: #171717;
+	--main-text-1: #E7E7E7;
+	--main-text-2: #B2B2B2;
+}
+
+@font-face{
+	font-family: "spotify";
+	src: url("../webfonts/spotify.otf");
+  }
+
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: spotify, "Times New Roman", Times, serif;;
+	color: var(--main-text-1);
+}
+
+#logotype
+{
+	color: var(--main-text-1);
+	display: flex;
+	align-items: center;
+}
+
+#logotype i
+{
+	margin: 1.3rem 0.5rem 1.3rem 1.3rem;
+}
+
+#logotype h1
+{
+	font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+header
+{
+	grid-area: header;
+}
+
+aside
+{
+	grid-area: aside;
+	background-color: var(--main-bg-1);
+	width: 100%;
+}
+
+nav
+{
+	grid-area: nav;
+	background-color: var(--main-bg-2);
+	width: 100%;
+}
+
+main
+{
+	grid-area: main;
+	background-color: var(--main-bg-3);
+	width: 100%;
+}
+
+body
+{
+	display: grid;
+	grid-template-columns: 16rem 1fr;
+	grid-template-rows: 3rem auto;
+	grid-template-areas:
+	"aside nav"
+	"aside main"
+}
