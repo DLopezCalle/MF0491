@@ -22,7 +22,48 @@
 	/* color: var(--main-text-1); */
 }
 
+body
+{	
+}
+
+body::-webkit-scrollbar {
+	-webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical
+{
+	width: 0.6rem;
+	position: relative;
+}
+
+body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
+	display: none;
+} 
+
+body::-webkit-scrollbar:horizontal {
+	height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #797979;
+	border: 0;
+}
+/*
+body::-webkit-scrollbar-track {
+	border-radius: 10px;  
+}
+*/
 /* ================ ASIDE ================ */
+
+aside
+{
+	position: sticky;
+	top: 0;
+
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
 
 #logotype
 {
@@ -54,7 +95,7 @@ aside article ul a
 	color: var(--main-text-2);
 
 	text-decoration: none;
-	margin: 0.6rem 1.6rem;
+	margin: 0.8rem 1.6rem;
 
 	transition: 0.5s;
 }
@@ -82,7 +123,7 @@ aside article ul a li
 
 aside article ul a li i
 {
-	width: 18%;
+	width: 20%;
 }
 
 aside article ul a li h3
@@ -130,6 +171,9 @@ aside #aside-down ul a:hover
 
 nav
 {
+	position: sticky;
+	top: 0;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -188,6 +232,79 @@ nav .button-sesion:hover
 	background-color: var(--main-text-3);
 }
 
+/* ================ MAIN ================ */
+
+
+main article
+{
+	padding: 1.8rem 1.8rem 0 1.8rem;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--main-bg-3);
+}
+
+main article a
+{
+	text-decoration: none;
+	color: var(--main-text-1);
+
+	width: 91%;
+}
+
+main article .ver-todo
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+
+	color: var(--main-text-2);
+}
+
+main article .ver-todo h2
+{
+	font-size: 0.8rem;
+}
+
+main article a:hover
+{
+	text-decoration: underline;
+}
+
+main article section
+{
+	background-color: var(--main-bg-section);
+
+	width: 14.6%;
+	margin: 1rem 1.5rem 1.5rem 0;
+	padding: 1rem;
+
+	border-radius: 5px;
+}
+
+main article section img
+{
+	width: 100%;
+
+	border-radius: 5px;
+}
+
+main article section h3
+{
+	color: var(--main-text-1);
+	font-size: 1rem;
+
+	margin: 1rem 0 0.5rem 0;
+}
+
+main article p
+{
+	color: var(--main-text-2);
+	font-size: 0.85rem;
+	width: 100%;
+}
+
 
 
 
@@ -222,8 +339,9 @@ body
 {
 	display: grid;
 	grid-template-columns: 15rem 1fr;
-	grid-template-rows: 3.8rem auto;
+	grid-template-rows: 3.8rem 56vh auto;
 	grid-template-areas:
 	"aside nav"
 	"aside main"
+	". main"
 }
