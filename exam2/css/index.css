@@ -1,0 +1,286 @@
+:root
+{
+	--main-bg-1: #1976D2;
+	--main-bg-2: #2196F3;
+	--main-bg-3: #00BCD4;
+	--main-bg-4: #BBDEFB;
+	--main-bg-5: #BDBDBD;
+	--main-text: #212121;
+	--white: #FFFFFF;
+	--focus: #F44336;
+	--visited: #C2185B;
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+/* ==================== Estilos generales solicitados ==================== */
+
+body
+{
+	font-family: sans-serif;
+	background-color: var(--main-bg-5);
+}
+
+p
+{
+	font-size: 12px;
+}
+
+a
+{
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--main-text);
+}
+
+a:visited
+{
+	color: var(--visited);
+}
+
+/* ==================== Cabecera ==================== */
+
+header
+{
+	background-color: var(--main-bg-1);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 4rem;
+}
+
+header ul
+{
+	list-style: none;
+	display: flex;
+}
+
+header ul li
+{
+	font-size: 1.4rem;
+	margin-left: 3rem;
+}
+
+header ul li a
+{
+	text-decoration: underline;
+	transition: 0.2s;
+}
+
+header ul li a:hover
+{
+	color: var(--focus);
+	transition: 0.2s;
+}
+
+/* ==================== Principal ==================== */
+
+main
+{
+	background-color: var(--main-bg-5);
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	align-items: flex-start;
+
+	padding: 1rem;
+}
+
+main section
+{
+	width: 30%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main h1
+{
+	color: var(--main-bg-1);
+	font-size: 25px;
+
+	margin: 2rem;
+}
+
+/* Quienes somos */
+
+#miTabla
+{
+	border-collapse: collapse;
+}
+
+#miTabla thead
+{
+	background-color: var(--main-bg-2);
+	font-size: 1.1rem;
+}
+
+#miTabla thead th
+{
+	padding: 0.5rem;
+	border-right: solid 1px;
+	border-bottom: solid 1px;
+}
+#miTabla tbody tr
+{
+	background-color: var(--white);
+}
+
+#miTabla tbody tr:nth-child(even)
+{
+	background-color: var(--main-bg-4);
+}
+
+#miTabla tbody td
+{
+	padding: 0.5rem;
+	border-bottom: solid 1px;
+	
+}
+
+/* Galería */
+
+main section img
+{
+	width: 50%;
+}
+
+/* ==================== Footer ==================== */
+
+footer
+{
+	background-color: var(--main-text);
+	color: var(--white);
+
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+
+	width: 100%;
+
+	padding: 1rem 0;	
+}
+
+/* ==================== MediaQuerys ==================== */
+
+@media (max-width: 1023px)
+{
+	#section1 {
+		grid-area: somos;
+	}
+
+	#section2 {
+		grid-area: lorem;
+	}
+
+	#section3 {
+		grid-area: galeria;
+	}
+
+	main
+	{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+		"somos lorem"
+		"galeria galeria";
+	}
+
+	main section
+	{
+		width: 100%;
+	}
+
+	#section3
+	{
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-around;		
+	}
+
+	#section3 h1 
+	{
+		width: 100%;
+		text-align: center;
+	}
+
+	#section3 img
+	{
+		width: 30%;
+	}
+
+	footer
+	{
+		position: inherit;
+	}
+}
+
+@media (max-width: 615px)
+{
+	header h1
+	{
+		grid-area: exam;
+	}
+
+	header nav
+	{
+		grid-area: nav;
+	}
+
+	header
+	{
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	header nav
+	{
+		width: 100%;
+		margin-top: 1rem;
+	}
+
+	header h1
+	{		
+		width: 100%;
+		text-align: center;
+		margin-right: 5%;
+	}
+
+	header nav ul
+	{
+		display: flex;
+		justify-content: space-between;
+		
+	}
+
+	header ul li
+	{
+		margin: 0;
+	}
+
+	main
+	{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+		"somos"
+		"lorem"
+		"galeria";
+	}
+
+	#section3 img
+	{
+		width: 80%;
+	}
+
+}

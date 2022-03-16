@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="//cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">	
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+	<script src="//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"></script>
+	<title>Examen2</title>
+</head>
+<body>
+	<header>
+		<h1>EXAM 2</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="#">Inicio</a>
+				</li>
+				<li>
+					<a href="http://www.ipartek.com" target="_blank">Ipartek</a>
+				</li>
+				<li>
+					<a href="http://www.campus.formacion.ipartek.com/" target="_blank">Campus</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="section1">
+			<h1>¿Quienes somos?</h1>
+			<table id="miTabla">
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Apellido</th>
+						<th>Edad</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Diego</td>
+						<td>López</td>
+						<td>21</td>
+					</tr>
+					<tr>
+						<td>Manuela</td>
+						<td>García</td>
+						<td>42</td>
+					</tr>
+					<tr>
+						<td>Pepe</td>
+						<td>Fernández</td>
+						<td>18</td>
+					</tr>
+					<tr>
+						<td>Marcela</td>
+						<td>Perez</td>
+						<td>30</td>
+					</tr>
+					<tr>
+						<td>Marta</td>
+						<td>Jimenez</td>
+						<td>30</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section id="section2">
+			<h1>Lorem Ipsum</h1>
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod sint eveniet, aperiam dolores, 
+				praesentium quisquam rerum voluptate perspiciatis architecto labore dolore ea modi sequi? 
+				Asperiores a eius exercitationem cum doloribus!
+			</p><br>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione deleniti iusto deserunt 
+				doloremque nisi modi aliquid corrupti alias aperiam quos. Velit quod voluptatum nostrum! 
+				Consectetur praesentium odit distinctio illo voluptatibus.
+			</p><br>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto nam ipsam maxime, 
+				nisi repudiandae veniam blanditiis asperiores facere corrupti, expedita labore dolore laborum 
+				deserunt dolorem, id minus obcaecati ipsa nulla!
+			</p><br>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem voluptate temporibus, 
+				sed, nihil culpa expedita mollitia commodi ex in molestiae laborum rem enim et optio. 
+				Totam veniam natus eius exercitationem.
+			</p>
+		</section>
+		
+		<section  id="section3">
+			<h1>Galería</h1>
+			<img src="img/imagen1.jpg" alt="Primera imagen de la galería">
+			<img src="img/imagen2.jpg" alt="Segunda imagen de la galería">
+			<img src="img/imagen3.jpg" alt="Tercera imagen de la galería">
+		</section>
+
+
+	</main>
+
+	<footer>
+		<p>&#169 Reservados todos los derechos. 2022 - Diego López</p>
+	</footer>
+	
+</body>
+
+<script>
+	$(document).ready(function() {
+    $('#miTabla').DataTable( {
+        language: {
+            url: '//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json'
+        }
+    } );
+} );
+</script>
+
+</html>

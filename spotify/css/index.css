@@ -48,11 +48,7 @@ body::-webkit-scrollbar-thumb {
 	background-color: #797979;
 	border: 0;
 }
-/*
-body::-webkit-scrollbar-track {
-	border-radius: 10px;  
-}
-*/
+
 /* ================ ASIDE ================ */
 
 aside
