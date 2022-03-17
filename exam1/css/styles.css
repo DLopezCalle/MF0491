@@ -1,0 +1,283 @@
+:root
+{
+    --fondoOscuro: #616161;
+    --fondoClaro: #707070;
+    --principal: #BDBDBD;
+    --textoOscuro: #212121;
+    --contraste: #009688;
+    --blanco: #F5F5F5;
+}
+
+@font-face 
+{
+    font-family: fuente;
+    src: url(../fonts/fuente.ttf);
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+
+    font-family: fuente, "Times New Roman", Times, serif;
+}
+
+/* Pensando para dispositivos moviles */
+
+header
+{
+    background-color: var(--textoOscuro);
+    color: var(--blanco);
+
+    text-align: center;
+
+    font-size: 1.6rem;
+    padding: 1.5rem;
+}
+
+nav
+{
+    background-color: var(--fondoOscuro);
+}
+
+ul
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    height: 100px;
+}
+
+li 
+{
+    list-style: none;
+}
+
+nav a 
+{    
+    background-color: var(--contraste);   
+    color: var(--textoOscuro);
+    
+    text-align: center;
+    font-size: 1.2rem;
+    
+    padding: 0.5rem;
+    margin: 0.2rem;
+    width: 45%;
+
+    border-radius: 100px;
+}
+
+main 
+{
+    background-color: var(--principal);
+    color: var(--textoOscuro);
+
+    padding: 1rem;
+}
+
+h1, h2, h3 
+{
+    margin: 1rem 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+main a
+{
+    color: var(--contraste)
+}
+
+main p
+{
+    margin: 0.5rem;
+}
+
+#imagenes /* Div que contiene las imágenes en la página de inicio */
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+img
+{
+    width: 90%;
+
+    margin: 0.2rem;
+    border: solid 0.3rem var(--contraste);
+    
+}
+
+footer
+{
+    background-color: var(--textoOscuro);
+    color: var(--blanco);
+
+    text-align: center;
+    padding: 1rem;
+}
+
+
+/* --------- Para las otras páginas --------- */
+
+.imagenRamdom /* Div que contiene una imagen */
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* --------- Ajustes para pantallas más grandes --------- */
+
+header
+{
+    grid-area: cabecera;
+}
+
+nav
+{
+    grid-area: menuCabecera;
+}
+
+main
+{
+    grid-area: principal;
+}
+
+footer
+{
+    grid-area: pie;
+}
+
+#bienvenida
+{
+    grid-area: bienvenida;
+}
+
+#quienSomos
+{
+    grid-area: quienSomos;
+}
+
+#imagenes 
+{
+    grid-area: imagenes;
+}
+
+.titulo
+{
+    grid-area: titulo;
+}
+
+.seccion1
+{
+    grid-area: seccion1;
+}
+
+.seccion2
+{
+    grid-area: seccion2;
+}
+
+
+@media (min-width: 768px) /* aprox tamaño tablet */
+{
+    body 
+    {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        
+        grid-template-areas: 
+            "cabecera menuCabecera"
+            "principal principal"
+            "pie pie";
+    }
+
+    header
+    {
+        display: flex;
+        align-items: center;
+
+        position: sticky;
+        top: 0;
+    }
+
+    nav 
+    {
+        display: flex;
+        align-items: center;
+
+        background-color: var(--textoOscuro);
+
+        position: sticky;
+        top: 0;
+    }
+
+    ul
+    {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    nav a 
+    {
+        width: 20%;
+        padding: 1rem;
+
+        border-radius: 100px;
+    }
+
+    #mainIndex
+    {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        
+        grid-template-areas: 
+            "bienvenida imagenes"
+            "quienSomos imagenes";
+    }
+
+    #imagenes
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #imagenes h2
+    {
+        width: 100%;
+        text-align: center;
+    }
+
+    #imagenes img 
+    {
+        width: 40%;
+    }
+
+    /* ------------- Para las otras páginas ------------- */
+
+    #mainOtros
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        grid-template-areas: 
+            "titulo titulo"
+            "seccion1 seccion2";
+
+        text-align: center;
+    }
+
+    .titulo
+    {
+        padding: 0 10rem;
+    }    
+}
