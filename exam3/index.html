@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="js/all.min.js"></script>
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<title>exam3 - Diego López</title>
+</head>
+<body>
+	<header>
+		<i id="logo" class="fa-solid fa-shop fa-3x"></i>		
+	</header>
+	<nav>
+		<ul>
+			<li>
+				<a href="crud.html">Gestionar</a>
+			</li>
+			<li>
+				<a href="add.html">Nuevo producto</a>
+			</li>
+		</ul>
+		<a href="login.html">Iniciar sesión</a>
+	</nav>
+
+	<main>
+		<section class="product">
+			<img src="img/beefeater.jpg" alt="Imagen del producto">
+			<h2 class="price">7.90 €</h2>
+			<h4 class="unit">(18,50 € / Litro)</h4>
+			<h3 class="name">BEEFEATER ginebra inglesa botella 70 cl</h3>
+			<form action="#">
+				<input aria-label="cantidad" type="number" value="1" minlength="1" step="1">
+				<input aria-label="Añadir al carrito" type="submit" value="AÑADIR AL CARRO">
+			</form>
+		</section>
+	</main>
+
+	<main>
+		<section class="product product-discount">
+			<img src="img/beefeater.jpg" alt="Imagen del producto">
+			<h2 class="price">7.90 €</h2>
+			<h2 class="discount">12.95 €</h2>
+			<h4 class="unit">(18,50 € / Litro)</h4>
+			<h3 class="name">BEEFEATER ginebra inglesa botella 70 cl</h3>
+			<form action="#">
+				<input aria-label="cantidad" type="number" value="1" minlength="1" step="1">
+				<input aria-label="Añadir al carrito" type="submit" value="AÑADIR AL CARRO">
+			</form>
+		</section>
+	</main>
+
+	<h4 id="subir">
+			
+		<a href="#">
+			<i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
+			<span>Subir</span>
+		</a>
+	</h4>
+
+	<!-- <footer>
+		<p>&#169 Reservados todos los derechos. 2022 - Diego López</p>		
+	</footer> -->
+</body>
+</html>
