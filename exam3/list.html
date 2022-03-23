@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="js/all.min.js"></script>
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="//cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">	
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+	<script src="//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"></script>
+	<title>exam3 - Diego López</title>
+</head>
+<body>
+	<header>
+		<a href="index.html">
+			<i id="logo" class="fa-solid fa-shop fa-3x"></i>
+			<span>Inicio</span>
+		</a>
+	</header>
+	<nav>
+		<ul>
+			<li>
+				<a href="list.html">Gestionar</a>
+			</li>
+
+			<li>
+				<a href="add.html">Nuevo producto</a>
+			</li>
+		</ul>
+		<a href="login.html">Iniciar sesión</a>
+	</nav>
+
+	<main>
+		<table id="list">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Nombre</th>
+					<th>Precio</th>
+					<th>Descuento</th>
+					<th>Litro</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>BEEFEATER ginebra inglesa botella 70 cl</td>
+					<td>13.35 €</td>
+					<td>12.95 €</td>
+					<td>18,50 €</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>BEEFEATER ginebra inglesa botella 70 cl</td>
+					<td>13.35 €</td>
+					<td>12.95 €</td>
+					<td>18,50 €</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>BEEFEATER ginebra inglesa botella 70 cl</td>
+					<td>13.35 €</td>
+					<td>12.95 €</td>
+					<td>18,50 €</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>BEEFEATER ginebra inglesa botella 70 cl</td>
+					<td>13.35 €</td>
+					<td>12.95 €</td>
+					<td>18,50 €</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>BEEFEATER ginebra inglesa botella 70 cl</td>
+					<td>13.35 €</td>
+					<td>12.95 €</td>
+					<td>18,50 €</td>
+				</tr>
+			</tbody>
+		</table>
+	</main>
+
+	<footer>
+
+		<h4 id="subir">
+			
+			<a href="#">
+				<i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
+				<span>Subir</span>
+			</a>
+		</h4>
+
+		<ul>
+			<li class="foo-icon">
+				<a href="#">
+					<i class="fa-brands fa-facebook fa-2x"></i>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li class="foo-icon">
+				<a href="#">
+					<i class="fa-brands fa-twitter fa-2x"></i>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					Política de privacidad
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					Contacto
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					Localización
+				</a>
+			</li>
+		</ul>
+
+		<p>&#169 Reservados todos los derechos. 2022 - Diego López</p>
+
+	</footer>
+</body>
+<script>
+	$(document).ready(function() {
+    $('#list').DataTable( {
+        language: {
+            url: '//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json'
+        }
+    } );
+} );
+</script>
+</html>

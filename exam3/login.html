@@ -6,6 +6,7 @@
 	<script src="js/all.min.js"></script>
 	<link rel="stylesheet" href="css/all.min.css">
 	<link rel="stylesheet" href="css/index.css">
+
 	<title>exam3 - Diego López</title>
 </head>
 <body>
@@ -29,37 +30,13 @@
 	</nav>
 
 	<main>
-		<section class="product product-discount">
-
-			<img src="img/beefeater.jpg" alt="Imagen del producto">
-
-			<h2 class="price">13.35 €</h2>
-			<h2 class="discount">12.95 €</h2>
-			<h4 class="unit">(18,50 € / Litro)</h4>
-
-			<h3 class="name">BEEFEATER ginebra inglesa botella 70 cl</h3>
-
-			<form action="#">
-				<input aria-label="cantidad" type="number" value="1" minlength="1" step="1">
-				<input aria-label="Añadir al carrito" type="submit" value="AÑADIR AL CARRO">
-			</form>
-
-		</section>
-		<section class="product">
-
-			<img src="img/beefeater.jpg" alt="Imagen del producto">
-
-			<h2 class="price">7.90 €</h2>
-			<h4 class="unit">(18,50 € / Litro)</h4>
-
-			<h3 class="name">BEEFEATER ginebra inglesa botella 70 cl</h3>
-
-			<form action="#">
-				<input aria-label="cantidad" type="number" value="1" minlength="1" step="1">
-				<input aria-label="Añadir al carrito" type="submit" value="AÑADIR AL CARRO">
-			</form>
-
-		</section>		
+		<form id="login">
+			<label for="user">Nombre de usuario:</label>
+			<input aria-label="Nombre de usuario" type="text" name="user" required>
+			<label for="password">Contraseña de usuario:</label>
+			<input aria-label="Contraseña de usuario" type="password" name="password" required>
+			<input aria-label="Iniciar sesión" type="submit" value="Iniciar sesión">
+		</form>
 	</main>
 
 	<footer>
@@ -71,7 +48,7 @@
 				<span>Subir</span>
 			</a>
 		</h4>
-
+		
 		<ul>
 			<li class="foo-icon">
 				<a href="#">

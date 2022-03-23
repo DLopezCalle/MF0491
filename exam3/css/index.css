@@ -11,8 +11,8 @@
 
 @font-face 
 {
-    font-family: fuente;
-    src: url(../fonts/fuente.ttf);
+	font-family: fuente;
+	src: url(../fonts/fuente.ttf);
 }
 
 *
@@ -43,6 +43,17 @@ header
 	justify-content: space-between;
 }
 
+header a
+{
+	color: var(--white);
+	text-align: center;
+
+	width: 100%;
+	margin: 1rem;
+
+	width: 100%;
+}
+
 nav
 {
 	background-color: var(--black);
@@ -59,12 +70,6 @@ nav
 	top: 0;
 
 	margin-bottom: 3rem;
-}
-
-#logo /* Icono del header */
-{
-	width: 100%;
-	margin: 1rem;
 }
 
 nav ul
@@ -92,6 +97,95 @@ nav a
 	padding: 0.5rem;
 	border-radius: 20px;
 }
+
+/* ========== Footer ========== */
+
+footer
+{
+	background-color: var(--black);
+	color: var(--white);
+
+	text-align: center;
+
+	margin-top: 3rem;
+
+	padding: 1rem 0;	
+}
+
+a span
+{
+	display: none;
+	position: sticky;
+	left: 0;
+}
+
+footer ul
+{
+	list-style: none;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+footer ul li
+{
+	margin: 0.5rem;
+}
+
+footer ul .foo-icon
+{
+	width: 45%;
+	margin-bottom: 1rem;
+}
+
+footer ul li a
+{
+	color: var(--white);
+}
+
+footer p
+{
+	margin-top: 1rem;
+}
+
+/* ========== Boton de retorno ========== */
+
+@media (max-width: 576px)
+{
+	#subir  /* enlace con enlace para subir */
+	{
+		background-color: rgba(0, 0, 0, 0.5);
+		color: var(--white);
+
+		width: min-content;
+
+		padding: 0.5rem;
+		margin: 0;
+		border-radius: 50px;
+
+		position: fixed;
+		z-index: 2;
+		bottom: 0;
+		right: 0;
+	}
+
+	#subir a
+	{
+		text-decoration: none;
+		color: var(--white);
+	}
+}
+
+@media (min-width: 577px)
+{
+	#subir
+	{
+		display: none;
+	}
+}
+
+/* ==================== index.html ==================== */
 
 /* ========== Main ========== */
 main
@@ -157,7 +251,7 @@ main
 	background-color: var(--main-bg);
 	text-align: center;
 
-	width: 30%;
+	width: 50%;
 
 	
 	padding: 0.5rem;
@@ -194,49 +288,40 @@ main
 	width: 5rem;
 }
 
-/* ========== Footer ========== */
-
-#subir  /* enlace con enlace para subir */
+main #login
 {
-	background-color: rgba(0, 0, 0, 0.5);
-	color: var(--white);
+	background-color: var(--white);
 
-	width: min-content;
+	display: flex;
+	flex-direction: column;
 
+	margin: 2rem;
+	padding: 1rem;
+
+	width: 80%;
+}
+
+main #login *
+{
+	margin: 0.5rem 0;
+}
+
+main #login input
+{
 	padding: 0.5rem;
-	margin: 0;
-	border-radius: 50px;
 
-	position: fixed;
-	z-index: 2;
-	bottom: 0;
-	right: 0;
+	border-radius: 30px;
+	border: var(--grey) 1px solid;
 }
 
-#subir a
+main #login input[type=submit]
 {
-	text-decoration: none;
-	color: var(--white);
-}
-
-#subir a span
-{
-	display: none;
-	position: sticky;
-	left: 0;
-}
-
-footer
-{
-	background-color: var(--black);
+	background-color: var(--contrast);
 	color: var(--white);
 
-	text-align: center;
+	width: 100%;
 
-	margin-top: 3rem;
-
-	padding: 1rem 0;	
+	margin-top: 1rem;
+	padding: 1rem;
+	border-radius: 0;
 }
-
-
-
