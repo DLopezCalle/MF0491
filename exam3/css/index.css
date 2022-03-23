@@ -288,7 +288,11 @@ main
 	width: 5rem;
 }
 
-main #login
+/* ==================== login.html ==================== */
+
+/* ========== Main ========== */
+
+main #form
 {
 	background-color: var(--white);
 
@@ -301,12 +305,12 @@ main #login
 	width: 80%;
 }
 
-main #login *
+main #form *
 {
 	margin: 0.5rem 0;
 }
 
-main #login input
+main #form input
 {
 	padding: 0.5rem;
 
@@ -314,7 +318,7 @@ main #login input
 	border: var(--grey) 1px solid;
 }
 
-main #login input[type=submit]
+main #form input[type=submit]
 {
 	background-color: var(--contrast);
 	color: var(--white);
@@ -324,4 +328,47 @@ main #login input[type=submit]
 	margin-top: 1rem;
 	padding: 1rem;
 	border-radius: 0;
+}
+
+/* ==================== MediaQuerys ==================== */
+
+@media (min-width: 768px)
+{
+	/* ==================== index.html ==================== */
+	
+	nav
+	{
+		width: auto;
+		padding: 0 2rem;
+	}
+
+	.product
+	{
+		max-width: 15%;
+		padding: 1rem;
+		margin: 1rem;
+
+		position: relative;
+		bottom: 0;
+	}
+
+	.product-discount .unit
+	{
+		margin-top: -2rem;
+	}
+
+	/* ==================== login.html and add.html ==================== */
+
+	main #form
+	{
+		width: 30%;
+	}
+}
+
+@media (max-width: 1080px) and (min-width: 769px)
+{
+	.product
+	{
+		max-width: 30%;
+	}
 }
